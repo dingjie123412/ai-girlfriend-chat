@@ -5,7 +5,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+#API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+API_KEY = st.secrets.get("DEEPSEEK_API_KEY", "")
 URL = "https://api.deepseek.com/v1/chat/completions"
 MODEL = "deepseek-chat"
 
